@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../src/OffersSection.module.css";
+import "../src/styles/OffersSection.css";
 import Offer from "./Offer";
 import space1 from "../src/images/space1.png";
 import space2 from "../src/images/space2.png";
@@ -30,9 +30,9 @@ export default function OffersSection() {
     },
   ];
   return (
-    <div className={styles.offersSection}>
-      <span className={styles.offersFooterTitle}>Offers</span>
-      <div className={styles.offersContainer}>
+    <div className="offers-section">
+      <span className="offers-section__footer-title">Offers</span>
+      <div className="offers-section__container">
         {offers.map((offer, index) => (
           <Offer
             key={index}
@@ -41,11 +41,11 @@ export default function OffersSection() {
             backgroundImage={offer.backgroundImage}
           />
         ))}
-        <div className={styles.offersFooterContainer}>
-          <span className={styles.offersFooterTitle}>
+        <div className="offers-section__footer-container">
+          <span className="offers-section__footer-title">
             Embark on a space journey
           </span>
-          <span className={styles.offersFooterDescription}>
+          <span className="offers-section__footer-description">
             Travelling into space is one of the most exciting and unforgettable
             adventures that can change your life forever. And if you have ever
             dreamed of exploring stars, planets and galaxies, then our company
@@ -57,7 +57,7 @@ export default function OffersSection() {
             comfort so that you can fully enjoy your adventure in space. We
             offer various options for space excursions.
           </span>
-          <a href="#" className={styles.link}>
+          <a href="#" className="offers-section__link">
             Read more
           </a>
         </div>

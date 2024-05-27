@@ -1,5 +1,4 @@
-.offersSection {
-  /* TODO: ADD AGNLE TO THE GRADIENT*/
+.offers-section {
   background-image: linear-gradient(#0d1e48, #304571);
   color: white;
   display: flex;
@@ -8,25 +7,25 @@
   gap: 30px;
 }
 
-.offersFooterContainer {
+.offers-section__footer-container {
   display: flex;
   flex-direction: column;
 }
 
-.offersContainer {
+.offers-section__container {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: space-between;
 }
 
-.offersFooterDescription {
+.offers-section__footer-description {
   margin: 0;
   font-weight: 700;
   opacity: 60%;
 }
 
-.link {
+.offers-section__link {
   white-space: nowrap;
   color: #ebff00;
   text-decoration: none;
@@ -34,69 +33,69 @@
   font-size: 20px;
 }
 
-.link:hover {
+.offers-section__link:hover {
   color: #ebff0099;
 }
 
 /* desktop */
 @media (min-width: 1248px) {
-  .offersSection {
+  .offers-section {
     padding: 60px 80px;
   }
-  .offersContainer {
+  .offers-section__container {
     gap: 40px;
   }
-  .offersFooterContainer {
+  .offers-section__footer-container {
     margin-top: 20px;
     gap: 17px;
   }
-  .offersFooterTitle {
+  .offers-section__footer-title {
     font-size: 32px;
   }
-  .offersFooterDescription {
+  .offers-section__footer-description {
     font-size: 20px;
   }
 }
 
 /* tablet */
 @media (min-width: 768px) and (max-width: 1248px) {
-  .offersSection {
+  .offers-section {
     padding: 55px 30px;
   }
-  .offersFooterContainer {
+  .offers-section__footer-container {
     margin-top: 25px;
     gap: 20px;
   }
-  .offersContainer {
+  .offers-section__container {
     gap: 30px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .offersFooterTitle {
+  .offers-section__footer-title {
     font-size: 24px;
   }
-  .link {
+  .offers-section__link {
     font-size: 16px;
   }
 }
 
 /* mobile */
 @media (max-width: 767px) {
-  .offersSection {
+  .offers-section {
     padding: 50px 20px;
   }
-  .offersFooterContainer {
+  .offers-section__footer-container {
     margin-top: 20px;
     gap: 20px;
   }
-  .offersFooterDescription {
+  .offers-section__footer-description {
     font-size: 14px;
   }
-  .offersFooterTitle {
+  .offers-section__footer-title {
     font-size: 18px;
   }
-  .link {
+  .offers-section__link {
     font-size: 14px;
   }
 }

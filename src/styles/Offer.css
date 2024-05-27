@@ -1,4 +1,4 @@
-.offerContainer {
+.offer-container {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
 }
 
-.offerContent {
+.offer-content {
   display: flex;
   flex-direction: column;
   gap: 22px;
@@ -15,58 +15,57 @@
 
 /* desktop */
 @media (min-width: 1248px) {
-  .offerContainer {
+  .offer-container {
     flex-basis: 40%;
     flex-grow: 1;
     padding: 35px;
     box-sizing: border-box;
   }
-  .offerContainer:nth-child(3n + 1) {
+  .offer-container:nth-child(3n + 1) {
     flex-basis: 100%;
     flex-grow: 1;
   }
-  .offerTitle {
+  .offer-title {
     font-size: 46px;
   }
-  .offerContainer:nth-child(3n + 1) .offerTitle {
+  .offer-container:nth-child(3n + 1) .offer-title {
     font-size: 74px;
   }
-  .offerContainer:nth-child(3n + 1) .offerDescription {
+  .offer-container:nth-child(3n + 1) .offer-description {
     font-size: 26px;
   }
-  .offerDescription {
+  .offer-description {
     font-size: 24px;
   }
 }
 
 /* tablet */
 @media (min-width: 768px) and (max-width: 1248px) {
-  .offerContainer {
+  .offer-container {
     flex-basis: 40%;
     flex-grow: 1;
     padding: 100px 27px 50px 27px;
     justify-content: center;
     align-items: start;
   }
-  .offerContent {
+  .offer-content {
     max-width: 220px;
   }
-  .offerTitle {
+  .offer-title {
     font-size: 40px;
   }
 }
 
 /* mobile */
 @media (max-width: 767px) {
-  .offerContainer {
+  .offer-container {
     flex-basis: 100%;
   }
-  .offerContent {
-    /* max-width: 200px; */
+  .offer-content {
     box-sizing: content-box;
-    padding: 65px 27px 75px 27px;
+    padding: 85px 27px 40px 27px;
   }
-  .offerTitle {
+  .offer-title {
     font-size: 40px;
   }
 }

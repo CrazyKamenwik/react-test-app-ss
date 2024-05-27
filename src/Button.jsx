@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "../src/Button.module.css";
+import "../src/styles/Button.css";
 
 export default function Button({ buttonText, buttonType }) {
   return (
     <button
-      className={`${
-        buttonType === "banner" ? styles.bannerButton : styles.button
+      className={`button ${
+        buttonType === "banner" ? "button--banner" : "button--default"
       }`}
     >
       {buttonText}

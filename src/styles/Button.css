@@ -1,4 +1,4 @@
-.bannerButton {
+/* .bannerButton {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   display: flex;
@@ -61,6 +61,63 @@
     font-size: 16px;
   }
   .button {
+    font-size: 16px;
+  }
+} */
+
+.button {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  font-weight: 700;
+  border-radius: 100px;
+  max-width: 191px;
+}
+
+.button--banner {
+  color: black;
+  background-color: #ebff00;
+  border: none;
+}
+
+.button--default {
+  background-color: transparent;
+  color: #ebff00;
+  border: #ebff00 solid;
+}
+
+.button--default:hover {
+  color: #ebff0099;
+  border-color: #ebff0099;
+}
+
+.button--banner:hover {
+  background-color: #ebff0099;
+}
+
+@media (min-width: 1248px) {
+  .button {
+    padding: 14px 40px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1247px) {
+  .button {
+    padding: 7px 40px;
+  }
+  .button--default {
+    font-size: 16px;
+  }
+  .button--banner {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .button--default,
+  .button--banner {
     font-size: 16px;
   }
 }

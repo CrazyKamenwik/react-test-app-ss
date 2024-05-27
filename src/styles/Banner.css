@@ -4,7 +4,7 @@
       rgba(0, 0, 0, 0) -0.52%,
       rgba(15, 20, 32, 0.79) 99.48%
     ),
-    url("../src/images/main-banner-background.png");
+    url("./../images/main-banner-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -16,28 +16,36 @@
   min-height: 500px;
 }
 
-.bannerContent {
+.banner__content {
   display: flex;
   flex-direction: column;
   gap: 22px;
 }
 
-.highlightSpace {
+.banner__content-header {
+  margin: 0;
+}
+
+.banner__highlight--space {
   color: #ff70d9;
 }
 
-.highlightEndless {
+.banner__highlight--endless {
   color: #ebff00;
+}
+
+.banner__earth {
+  width: 320px;
+  height: 360px;
 }
 
 /* desktop */
 @media (min-width: 1248px) {
-  .contentHeader {
+  .banner__content-header {
     font-size: 72px;
-    margin: 0;
   }
 
-  .content {
+  .banner__content-text {
     font-size: 32px;
   }
 }
@@ -48,16 +56,18 @@
     padding: 0 30px;
     overflow: hidden;
   }
-  .contentHeader {
+
+  .banner__content-header {
     font-size: 48px;
-    margin: 0;
   }
-  .earth {
+
+  .banner__earth {
     position: relative;
     right: -150px;
     z-index: 1;
   }
-  .content{
+
+  .banner__content-text {
     font-size: 22px;
   }
 }
@@ -70,19 +80,22 @@
     z-index: 2;
     flex-direction: column-reverse;
     padding: 0 34px;
-    gap: 0vh;
+    gap: 0;
     overflow: hidden;
   }
-  .bannerContent {
+
+  .banner__content {
     align-items: center;
     text-align: center;
     margin-bottom: 44px;
     gap: 17px;
   }
-  .contentHeader {
-    margin: 0;
+
+  .banner__content-header {
+    font-size: 36px;
   }
-  .earth {
+
+  .banner__earth {
     position: relative;
     top: -100px;
     z-index: 1;

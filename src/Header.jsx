@@ -4,25 +4,25 @@ import labelIcon from "../src/images/Page-label.svg";
 import basketIcon from "../src/images/basket-icon.svg";
 import burgerMenuIcon from "../src/images/burger-menu-button.svg";
 import closeMenuIcon from "../src/images/close-menu-button.svg";
-import styles from "../src/Header.module.css";
+import "../src/styles/Header.css";
 import useIsSmallScreen from "./hooks/useIsSmallScreen";
 
 const UnwrappedLinks = () => {
   return (
-    <div className={`menu-links ${styles.menuLinks}`}>
-      <a className={`${styles.headerLink}`} href="#">
+    <div className="header__menu-links">
+      <a className="header__link" href="#">
         Home
       </a>
-      <a className={`${styles.headerLink}`} href="#">
+      <a className="header__link" href="#">
         Products
       </a>
-      <a className={`${styles.headerLink}`} href="#">
+      <a className="header__link" href="#">
         <svg width="25" height="25" style={{ marginLeft: "5px" }}>
           <image
             width="24"
             height="27"
             href={basketIcon}
-            className={`${styles.headerLink}`}
+            className="header__link"
           ></image>
         </svg>
       </a>
@@ -31,45 +31,49 @@ const UnwrappedLinks = () => {
 };
 
 const BurgerMenu = ({ isOpen, toggleMenu }) => (
-  <div className={`${styles.burgerMenu} ${isOpen ? styles.open : ""}`}>
-    <div className="logo">
-      <svg width="50" height="50">
-        <image width="50" height="50" href={planetIcon}></image>
+  <div
+    className={`header__burger-menu ${
+      isOpen ? "header__burger-menu--open" : ""
+    }`}
+  >
+    <div className="header__logo">
+      <svg width="60" height="90">
+        <image width="60" height="80" href={planetIcon}></image>
       </svg>
       <svg width="100" height="65" style={{ marginLeft: "5px" }}>
         <image width="100" height="80" href={labelIcon}></image>
       </svg>
     </div>
 
-    <div className={styles.menuContent}>
-      <a className={styles.burgerLink} href="#">
+    <div className="header__menu-content">
+      <a className="header__burger-link" href="#">
         Home
       </a>
-      <a className={styles.burgerLink} href="#">
+      <a className="header__burger-link" href="#">
         Products
       </a>
-      <a className={styles.burgerLink} href="#">
+      <a className="header__burger-link" href="#">
         Basket
         <svg width="5vh" height="5vh" style={{ marginLeft: "5px" }}>
           <image
             width="5vh"
             height="5vh"
             href={basketIcon}
-            className={`${styles.headerLink}`}
+            className="header__link"
           />
         </svg>
       </a>
 
-      <div className={`additional-links ${styles.additionalLinksContainer}`}>
-        <a className={styles.additionalLink} href="#">
+      <div className="header__additional-links-container">
+        <a className="header__additional-link" href="#">
           Contact us
         </a>
-        <a className={styles.additionalLink} href="#">
+        <a className="header__additional-link" href="#">
           About us
         </a>
       </div>
     </div>
-    <button className={styles.closeButton} onClick={toggleMenu}>
+    <button className="header__close-button" onClick={toggleMenu}>
       <svg width="40" height="40">
         <image href={closeMenuIcon}></image>
       </svg>
@@ -86,29 +90,40 @@ export default function Header() {
   };
 
   return (
-    <div className={styles.header}>
-      <a className={styles.companyLogo} href="#">
-        <svg width="35" height="35">
-          <image width="35" height="35" href={planetIcon}></image>
+    <div className="header">
+      <a className="header__logo" href="#">
+        <svg
+          width={isSmallScreen ? "24" : "35"}
+          height={isSmallScreen ? "24" : "35"}
+        >
+          <image
+            width={isSmallScreen ? "24" : "35"}
+            height={isSmallScreen ? "24" : "35"}
+            href={planetIcon}
+          ></image>
         </svg>
-        <svg width="70" height="35">
-          <image width="63" height="35" href={labelIcon}></image>
+        <svg
+          width={isSmallScreen ? "40" : "70"}
+          height={isSmallScreen ? "25" : "35"}
+        >
+          <image
+            width={isSmallScreen ? "40" : "63"}
+            height={isSmallScreen ? "25" : "35"}
+            href={labelIcon}
+          ></image>
         </svg>
       </a>
       {isSmallScreen ? (
         <>
-          <button className={styles.burgerMenuButton} onClick={toggleMenu}>
+          <button className="header__burger-menu-button" onClick={toggleMenu}>
             <svg width="30" height="40" style={{ marginRight: "20px" }}>
-              <image
-                href={burgerMenuIcon}
-                className={`${styles.headerLink}`}
-              ></image>
+              <image href={burgerMenuIcon} className="header__link"></image>
             </svg>
           </button>
           <BurgerMenu isOpen={menuOpen} toggleMenu={toggleMenu} />
         </>
       ) : (
-        UnwrappedLinks()
+        <UnwrappedLinks />
       )}
     </div>
   );
