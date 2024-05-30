@@ -17,11 +17,7 @@ export default function Banner() {
         </span>
         <Button buttonText={"Learn more"} buttonType={"banner"} />
       </div>
-      <img
-        className="banner__earth"
-        alt="Planet Earth picture"
-        src={earthImage}
-      ></img>
+      <img className="banner__earth" src={earthImage}></img>
     </div>
   );
 }

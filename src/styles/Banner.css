@@ -63,7 +63,7 @@
 
   .banner__earth {
     position: relative;
-    right: -150px;
+    right: -130px;
     z-index: 1;
   }
 
@@ -96,8 +96,8 @@
   }
 
   .banner__earth {
-    position: relative;
-    top: -100px;
+    position: absolute;
+    top: -110px;
     z-index: 1;
   }
 }
