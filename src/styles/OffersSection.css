@@ -25,15 +25,18 @@
   opacity: 60%;
 }
 
-.offers-section__link {
-  white-space: nowrap;
+.read-more__button {
+  font-family: "Lato", sans-serif;
   color: #ebff00;
   text-decoration: none;
+  background-color: transparent;
+  border: none;
   width: fit-content;
+  padding: 0;
   font-size: 20px;
 }
 
-.offers-section__link:hover {
+.read-more__button:hover {
   color: #ebff0099;
 }
 
@@ -75,7 +78,7 @@
   .offers-section__footer-title {
     font-size: 24px;
   }
-  .offers-section__link {
+  .read-more__button {
     font-size: 16px;
   }
 }
@@ -95,7 +98,7 @@
   .offers-section__footer-title {
     font-size: 18px;
   }
-  .offers-section__link {
+  .read-more__button {
     font-size: 14px;
   }
 }

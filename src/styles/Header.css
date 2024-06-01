@@ -32,12 +32,10 @@
   -webkit-text-fill-color: transparent;
 }
 
-.header__icon {
-  fill: white;
-}
-
-.header__link:hover .header__icon {
-  fill: linear-gradient(98.25deg, #ebff00 18.56%, #ff70d9 76.02%);
+.basket__image:hover svg {
+  filter: brightness(0) invert(1);
+  mask-image: linear-gradient(98.25deg, #ebff00 18.56%, #ff70d9 76.02%);
+  -webkit-mask-image: linear-gradient(98.25deg, #ebff00 18.56%, #ff70d9 76.02%);
 }
 
 .header__burger-menu-button {

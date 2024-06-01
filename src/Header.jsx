@@ -17,12 +17,12 @@ const UnwrappedLinks = () => {
         Products
       </a>
       <a className="header__link" href="#">
-        <svg width="25" height="25" style={{ marginLeft: "5px" }}>
+        <svg width="25" height="25" className="basket__image">
           <image
             width="24"
             height="27"
             href={basketIcon}
-            className="header__link"
+            className="basket__image"
           ></image>
         </svg>
       </a>

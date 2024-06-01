@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import "../src/styles/OffersSection.css";
 import Offer from "./Offer";
 import space1 from "../src/images/space1.png";
 import space2 from "../src/images/space2.png";
 import space3 from "../src/images/space3.png";
 import space4 from "../src/images/space4.png";
+import Modal from "./Modal";
 
 export default function OffersSection() {
   const offers = [
@@ -29,6 +30,17 @@ export default function OffersSection() {
       backgroundImage: `${space2}`,
     },
   ];
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = useCallback(() => {
+    setIsModalOpen(true);
+  }, []);
+
+  const handleCloseModal = useCallback(() => {
+    setIsModalOpen(false);
+  }, []);
+
   return (
     <div className="offers-section">
       <span className="offers-section__footer-title">Offers</span>
@@ -57,9 +69,16 @@ export default function OffersSection() {
             comfort so that you can fully enjoy your adventure in space. We
             offer various options for space excursions.
           </span>
-          <a href="#" className="offers-section__link">
+          <button href="#" className="read-more__button" onClick={openModal}>
             Read more
-          </a>
+          </button>
+          {isModalOpen && (
+            <Modal
+              onClose={handleCloseModal}
+              title="MAKING LIFE MULTIPLANETARY"
+              description="All Dragon and Starship missions have the ability to conduct scientific research to improve life back on Earth as well as raise awareness to a global audience.              "
+            />
+          )}
         </div>
       </div>
     </div>
