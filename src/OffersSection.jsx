@@ -20,7 +20,7 @@ export default function OffersSection() {
       backgroundImage: `${space3}`,
     },
     {
-      offerTitle: "For those who dream of stars ",
+      offerTitle: "For those who dream of stars",
       offerBody: "Our offer: make your dream come true",
       backgroundImage: `${space4}`,
     },

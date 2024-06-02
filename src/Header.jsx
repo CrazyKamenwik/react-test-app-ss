@@ -16,7 +16,7 @@ const UnwrappedLinks = () => {
       <a className="header__link" href="#">
         Products
       </a>
-      <a className="header__link" href="#">
+      <a className="header__link" href="#" role="link" aria-label="Basket">
         <svg width="25" height="25" className="basket__image">
           <image
             width="24"
@@ -73,7 +73,11 @@ const BurgerMenu = ({ isOpen, toggleMenu }) => (
         </a>
       </div>
     </div>
-    <button className="header__close-button" onClick={toggleMenu}>
+    <button
+      className="header__close-button"
+      aria-label="Close menu"
+      onClick={toggleMenu}
+    >
       <svg width="40" height="40">
         <image href={closeMenuIcon}></image>
       </svg>
@@ -115,7 +119,11 @@ export default function Header() {
       </a>
       {isSmallScreen ? (
         <>
-          <button className="header__burger-menu-button" onClick={toggleMenu}>
+          <button
+            aria-label="Open menu"
+            className="header__burger-menu-button"
+            onClick={toggleMenu}
+          >
             <svg width="30" height="40" style={{ marginRight: "20px" }}>
               <image href={burgerMenuIcon} className="header__link"></image>
             </svg>

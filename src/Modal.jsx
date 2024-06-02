@@ -14,7 +14,7 @@ export default function Modal({ onClose, title, description }) {
       <div className="modal__content">
         <div className="modal__content-title">{title}</div>
         <div className="modal__content-description">{description}</div>
-        <Button buttonText={"Got it !"} onPress={onClose} />
+        <Button buttonText={"Got it!"} onPress={onClose} />
       </div>
     </div>
   );
